@@ -17,11 +17,11 @@ public class HoraTrabalho {
 
 		double valorHora = salario / horasTrabalhadas;
 		if (valorHora <= 100 && salario <= pisoSalarial) {
-			System.out.println("Você tem a mesma renda que 70% da população brasileira: " + salario);
+			System.out.printf("Você tem a mesma renda que 70 por cento da população brasileira: %.2f %n" , salario);
 			System.out.println("O valor da sua hora de trabalho está entre 0 e R$ 100.");
 
 		} else if(valorHora > 100 || salario >= pisoSalarial2){
-			System.out.println("Você tem uma renda maior que 90% da população brasileira: " + salario);
+			System.out.printf("Você tem uma renda maior que 90 por cento da população brasileira: R$ %.2f %n" , salario);
 			System.out.println("O valor da sua hora é maior que R$ 100.");
 		}
 			
