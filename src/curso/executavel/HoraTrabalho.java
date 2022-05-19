@@ -16,17 +16,19 @@ public class HoraTrabalho {
 		double pisoSalarial2 = 3500;
 
 		double valorHora = salario / horasTrabalhadas;
-		if (valorHora <= 100 && salario <= pisoSalarial) {
-			System.out.printf("Você tem a mesma renda que 70 por cento da população brasileira: %.2f %n" , salario);
-			System.out.println("O valor da sua hora de trabalho está entre 0 e R$ 100.");
+		if (salario <= pisoSalarial || valorHora <= 9 ) { 
+			System.out.printf("Você faz parte dos 70 por cento da população brasileira em relação a média salarial: %.2f %n" , salario);
+			System.out.println("O valor da sua hora de trabalho está entre 1 e R$ 10.00");
 
-		} else if(valorHora > 100 || salario >= pisoSalarial2){
+		} else if(salario >= pisoSalarial2||valorHora >= 16 ){ 
 			System.out.printf("Você tem uma renda maior que 90 por cento da população brasileira: R$ %.2f %n" , salario);
-			System.out.println("O valor da sua hora é maior que R$ 100.");
+			System.out.println("O valor da sua hora é maior que  R$ 16.00");
+		}else {
+			System.out.println("Sua renda é maior que 70 por cento da população! R$ " + salario);
 		}
 			
 		
-		System.out.printf("A sua hora vale R$ %.2f", valorHora);
+		// base de horas -->> 220 horas de trabalho/mês.
 
 	}
 }
